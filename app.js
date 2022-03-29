@@ -60,3 +60,17 @@
 //     default:
 //         console.log('I dont know this fruit')
 // }
+
+//FOR LOOP
+
+const texts = ['love', 'grand', 'boyts', 'heyy']
+for (let i = 0; i < texts.length; i++) {
+    //RUN some code
+    console.log(texts[i])
+    // if(i == 40){
+    //     console.log("We are at 40")
+    //     break
+    // }
+    // console.log(i)
+    
+}
