@@ -119,17 +119,58 @@
 
 // console.log(list)
 
-const nodeItems = document.querySelectorAll('.item')
-const todoList = document.querySelector('.list')
-const item = todoList.children
-console.log(item)
-console.log(nodeItems)
-const todoNr = document.querySelector(".todo-nr")
+// const nodeItems = document.querySelectorAll('.item')
+// const todoList = document.querySelector('.list')
+// const item = todoList.children
+// console.log(item)
+// console.log(nodeItems)
+// const todoNr = document.querySelector(".todo-nr")
 
 
-const newItem = document.createElement('li')
-newItem.classList.add('item')
-newItem.innerText = "List 6"
+// const newItem = document.createElement('li')
+// newItem.classList.add('item')
+// newItem.innerText = "List 6"
 
-todoList.appendChild(newItem)
-todoNr.innerText = item.length
+// todoList.appendChild(newItem)
+// todoNr.innerText = item.length
+
+//EVENTS
+const button = document.querySelector("#submit")
+const todoList = document.querySelector('#todo-list')
+const todoNr = document.querySelector('.todo-nr b')
+const mainTitle = document.querySelector('.main-title')
+const nameInput = document.querySelector(".name-input")
+const items = todoList.children
+
+// button.addEventListener("keydown", function(event){
+//     mainTitle.classList.toggle("color")
+//     console.log(mainTitle)
+// })
+
+
+// ATTATCH AN EVENT LISTENER
+button.addEventListener('click', function(e){
+    e.preventDefault()
+    //Create Elemenet
+    const newItem = document.createElement("li")
+    //Adding class
+    newItem.classList.add("item")
+    //Adding Text
+    newItem.innerText = nameInput.value
+    todoList.appendChild(newItem)
+    todoNr.innerText = items.length
+    //Deleting from input
+    nameInput.value = ""
+    // Adding EventListener to each Items
+    newItem.addEventListener('click', deleteItem)
+})
+
+
+function deleteItem(e){
+    e.stopPropagation()
+    e.target.remove()
+}
+
+todoList.addEventListener("click", function(){
+    todoList.classList.toggle("fade")
+})

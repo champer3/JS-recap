@@ -1,0 +1,13 @@
+.color{
+    color: blue;
+    font-size: 5rem;
+    transition: all 1s ease;
+}
+
+.main-title{
+    transition: all 1s ease;
+}
+
+.fade{
+    opacity: 0;
+}
