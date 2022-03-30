@@ -63,14 +63,73 @@
 
 //FOR LOOP
 
-const texts = ['love', 'grand', 'boyts', 'heyy']
-for (let i = 0; i < texts.length; i++) {
-    //RUN some code
-    console.log(texts[i])
-    // if(i == 40){
-    //     console.log("We are at 40")
-    //     break
-    // }
-    // console.log(i)
+// const names = ['love', 'grand', 'boyts', 'heyy']
+
+//FOR OF
+// for(name of names){
+//     console.log(name)
+// }
+
+//FOR EACH CAN ONLY BE USED FOR ARRAYS, YOU CAN'T USE BREAK FOR FOREACH
+// names.forEach(function(name, index){
+//     if(name === 'heyy'){
+//         console.log('djklkn')
+//     }
+//     console.log(name, index)
+// })
+
+// for (let i = 0; i < texts.length; i++) {
+//     RUN some code
+//     console.log(texts[i])
+//     if(i == 40){
+//         console.log("We are at 40")
+//         break
+//     }
+//     console.log(i)
     
-}
+// }
+
+// const user = {
+//     name: 'stephen',
+//     age: 24,
+//     subscribers: 39930,
+//     money: 'lolno'
+// }
+
+// for(let x in user){
+//     console.log(user[x])
+// }
+
+//WHILE, DO WHILE
+
+// let i = 0
+
+// while(i < 10){
+//     console.log(i)
+//     i++
+// }
+
+// const headers = document.getElementsByTagName('h2')
+// const list = document.getElementsByClassName('item')
+// const button = document.getElementById('submit')
+
+// const headers = document.querySelectorAll('h2')
+// const list = document.querySelectorAll('.item')
+// const submit = document.querySelectorAll('#submit')
+
+// console.log(list)
+
+const nodeItems = document.querySelectorAll('.item')
+const todoList = document.querySelector('.list')
+const item = todoList.children
+console.log(item)
+console.log(nodeItems)
+const todoNr = document.querySelector(".todo-nr")
+
+
+const newItem = document.createElement('li')
+newItem.classList.add('item')
+newItem.innerText = "List 6"
+
+todoList.appendChild(newItem)
+todoNr.innerText = item.length
