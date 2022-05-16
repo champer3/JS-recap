@@ -1,4 +1,4 @@
-// The basics about Local Storage
+// The 
 // localStorage.setItem('todo', 'feed the cat')
 // localStorage.setItem('user', 'steven')
 
