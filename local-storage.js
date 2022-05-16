@@ -1,4 +1,4 @@
-// The 
+// The basics about Local Storage and how to store sessions
 // localStorage.setItem('todo', 'feed the cat')
 // localStorage.setItem('user', 'steven')
 
